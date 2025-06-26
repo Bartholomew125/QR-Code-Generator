@@ -3,6 +3,10 @@ import java.util.HashMap;
 /**
  * AlphanumericTable is a class that holds the alphanumeric characters, and the
  * integer values associated with them.
+ * 
+ * @see <a href=
+ *      "https://www.thonky.com/qr-code-tutorial/alphanumeric-table">Thonky's QR
+ *      Code Tutorial</a>
  */
 public class AlphanumericTable {
 

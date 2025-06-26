@@ -6,6 +6,10 @@ import exceptions.InvalidVersionForAlignmentPatternException;
 /**
  * AlignmentPatternLocationsTable is a class that holds the table for the
  * alignment patterns locations.
+ * 
+ * @see <a href=
+ *      "https://www.thonky.com/qr-code-tutorial/alignment-pattern-locations">Thonky's
+ *      QR Code Tutorial</a>
  */
 public class AlignmentPatternLocationsTable {
     

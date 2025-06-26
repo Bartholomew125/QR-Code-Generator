@@ -5,6 +5,10 @@ import java.util.HashMap;
  * FormatInformationBitsTable is a class that holds the bit strings that descibe
  * the format of the QR code. This includes which level of error correction
  * coding is used, and what mask pattern is used.
+ * 
+ * @see <a href=
+ *      "https://www.thonky.com/qr-code-tutorial/format-version-tables">Thonky's
+ *      QR Code Tutorial</a>
  */
 public class FormatInformationBitsTable {
 

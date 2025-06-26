@@ -4,6 +4,10 @@ import java.util.Arrays;
  * CharacterCapacitiyTable is a class that is repsonsible for holding
  * information about how many characters each QR code version can hold, hiven
  * the encoding mode.
+ * 
+ * @see <a href=
+ *      "https://www.thonky.com/qr-code-tutorial/character-capacities">Thonky's
+ *      QR Code Tutorial</a>
  */
 public class CharacterCapacityTable {
 

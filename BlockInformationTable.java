@@ -6,6 +6,10 @@ import exceptions.InvalidVersionException;
  * BlockInformationTable is a class that is responsible for holding information
  * about the number of blocks in groups, and the number of data codewords in
  * each block.
+ * 
+ * @see <a href=
+ *      "https://www.thonky.com/qr-code-tutorial/error-correction-table">Thonky's
+ *      QR Code Tutorial</a>
  */
 public class BlockInformationTable {
 
