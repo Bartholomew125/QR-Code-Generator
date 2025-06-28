@@ -1,6 +1,7 @@
 package Tables;
 import java.util.Arrays;
 
+import Exceptions.InvalidGroupException;
 import Exceptions.InvalidVersionException;
 import Types.ErrorCorrectionLevel;
 
