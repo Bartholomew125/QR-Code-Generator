@@ -1,6 +1,8 @@
+package Tables;
 import java.util.Arrays;
 
 import Exceptions.InvalidVersionException;
+import Types.ErrorCorrectionLevel;
 
 /**
  * BlockInformationTable is a class that is responsible for holding information
