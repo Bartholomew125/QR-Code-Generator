@@ -39,7 +39,7 @@ public class AlignmentPatternLocationsTable {
      * version. There exists no alignment patterns for version 1.
      */
     public int[] get(int qrVersion) throws Exception {
-        if (qrVersion == 2) {
+        if (qrVersion == 1) {
             throw new InvalidVersionForAlignmentPatternException(qrVersion);
         }
         if (qrVersion < 1 || qrVersion > 40) {
