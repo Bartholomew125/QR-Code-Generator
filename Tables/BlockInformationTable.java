@@ -73,7 +73,7 @@ public class BlockInformationTable {
             case 2:
                 return this.blocksInGroup2Table[index];
             default:
-                throw new Exception("Invalid group argument");
+                throw new InvalidGroupException();
         }
     }
 
@@ -93,7 +93,7 @@ public class BlockInformationTable {
             case 2:
                 return this.dataCodewordsInGroup2BlocksTable[index];
             default:
-                throw new Exception("Invalid group argument");
+                throw new InvalidGroupException();
         }
 
     }
