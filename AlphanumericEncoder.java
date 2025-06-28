@@ -1,3 +1,5 @@
+import Tests.AlphanumericTable;
+
 /**
  * AlphanumericEncoder is a class that is used for encoding data in alphanumeric
  * encoding mode.
