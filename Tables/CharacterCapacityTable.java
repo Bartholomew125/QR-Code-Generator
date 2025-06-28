@@ -97,7 +97,8 @@ public class CharacterCapacityTable {
 
     /**
      * Returns the smallest version required to hold a specified capacity given
-     * the error correction level and encoding mode.
+     * the error correction level and encoding mode. Returns -1 if there are no
+     * versions large enough to contain it.
      */
     public int get(ErrorCorrectionLevel errorCorrectionLevel, EncodingMode encodingMode, int capacity) throws Exception {
         int[] table = this.getTableFromEncodingMode(encodingMode);
@@ -107,7 +108,7 @@ public class CharacterCapacityTable {
                 return i+1;
             }
         }
-        throw new Exception("No version has a large enough capacity.");
+        return -1;
     }
 }
 
