@@ -1,4 +1,7 @@
 import java.util.List;
+
+import Types.EncodingMode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

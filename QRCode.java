@@ -1,3 +1,4 @@
+import Types.EncodingMode;
 import Types.ErrorCorrectionLevel;
 
 /**
