@@ -1,4 +1,4 @@
-package Tests;
+package Tables;
 import java.util.HashMap;
 
 import Exceptions.InvalidAlphanumericCharacterException;
