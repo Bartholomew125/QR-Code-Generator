@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-import exceptions.InvalidVersionException;
+import Exceptions.InvalidVersionException;
 
 /**
  * BlockInformationTable is a class that is responsible for holding information

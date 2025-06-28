@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-import exceptions.InvalidVersionException;
-import exceptions.InvalidVersionForAlignmentPatternException;
+import Exceptions.InvalidVersionException;
+import Exceptions.InvalidVersionForAlignmentPatternException;
 
 /**
  * AlignmentPatternLocationsTable is a class that holds the table for the
