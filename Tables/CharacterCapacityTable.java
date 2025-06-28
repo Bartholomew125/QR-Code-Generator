@@ -105,9 +105,9 @@ public class CharacterCapacityTable {
     public int get(ErrorCorrectionLevel errorCorrectionLevel, EncodingMode encodingMode, int capacity) {
         int[] table = this.getTableFromEncodingMode(encodingMode);
         int offset = Arrays.asList(ErrorCorrectionLevel.values()).indexOf(errorCorrectionLevel);
-        for (int i = offset; i < 160; i = i + 4) {
+        for (int i = offset; i < 40*4; i = i + 4) {
             if (table[i] >= capacity) {
-                return i+1;
+                return i/4 + 1;
             }
         }
         return -1;
