@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import Types.ErrorCorrectionLevel;
+
 /**
  * CharacterCapacitiyTable is a class that is repsonsible for holding
  * information about how many characters each QR code version can hold, hiven

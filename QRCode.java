@@ -1,3 +1,5 @@
+import Types.ErrorCorrectionLevel;
+
 /**
  * QRCode is a class that represents a QRCode.
  */

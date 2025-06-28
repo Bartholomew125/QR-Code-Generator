@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 import Exceptions.InvalidVersionException;
+import Types.ErrorCorrectionLevel;
 
 /**
  * ErrorCorrectionCodeWordsTable is a class that holds information about how
