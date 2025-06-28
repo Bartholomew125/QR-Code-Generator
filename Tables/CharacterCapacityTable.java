@@ -2,6 +2,7 @@ package Tables;
 import java.util.Arrays;
 
 import Exceptions.InvalidEncodingModeException;
+import Exceptions.InvalidVersionException;
 import Types.EncodingMode;
 import Types.ErrorCorrectionLevel;
 
@@ -89,7 +90,7 @@ public class CharacterCapacityTable {
      */
     public int get(int version, ErrorCorrectionLevel errorCorrectionLevel, EncodingMode encodingMode) throws Exception {
         if (version < 1 || version > 40) {
-            throw new Exception("Invalid version "+version+". Must be between 1 and 40 (inclusive)");
+            throw new InvalidVersionException();
         }
         int index = (version-1)*4 +
         Arrays.asList(ErrorCorrectionLevel.values()).indexOf(errorCorrectionLevel);
