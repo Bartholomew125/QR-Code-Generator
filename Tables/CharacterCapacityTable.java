@@ -1,5 +1,7 @@
+package Tables;
 import java.util.Arrays;
 
+import Types.EncodingMode;
 import Types.ErrorCorrectionLevel;
 
 /**
