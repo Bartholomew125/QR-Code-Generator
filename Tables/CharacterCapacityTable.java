@@ -1,6 +1,7 @@
 package Tables;
 import java.util.Arrays;
 
+import Exceptions.InvalidEncodingModeException;
 import Types.EncodingMode;
 import Types.ErrorCorrectionLevel;
 
@@ -78,7 +79,7 @@ public class CharacterCapacityTable {
             case EncodingMode.Kanji:
                 return this.kanjiTable;
             default:
-                throw new Exception("Unknown encodingMode mode.");
+                throw new InvalidEncodingModeException();
         }
     }
 
