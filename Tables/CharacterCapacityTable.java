@@ -91,8 +91,7 @@ public class CharacterCapacityTable {
             throw new Exception("Invalid version "+version+". Must be between 1 and 40 (inclusive)");
         }
         int index = (version-1)*4 +
-        Arrays.asList(EncodingMode.Numeric, EncodingMode.Alphanumeric,
-            EncodingMode.Byte, EncodingMode.Kanji).indexOf(encodingMode);
+        Arrays.asList(ErrorCorrectionLevel.values()).indexOf(errorCorrectionLevel);
         return this.getTableFromEncodingMode(encodingMode)[index];
     }
 
