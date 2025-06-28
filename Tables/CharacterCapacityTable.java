@@ -67,18 +67,18 @@ public class CharacterCapacityTable {
             1729,1362,972,750,1817,1435,1024,784};
     }
 
-    private int[] getTableFromEncodingMode(EncodingMode encodingMode) throws Exception {
+    private int[] getTableFromEncodingMode(EncodingMode encodingMode) {
         switch (encodingMode) {
-            case EncodingMode.Numeric:
+            case Numeric:
                 return this.numericTable;
-            case EncodingMode.Alphanumeric:
+            case Alphanumeric:
                 return this.alphanumericTable;
-            case EncodingMode.Byte:
+            case Byte:
                 return this.byteTable;
-            case EncodingMode.Kanji:
+            case Kanji:
                 return this.kanjiTable;
             default:
-                throw new Exception("Unknown encodingMode mode.");
+                return null; 
         }
     }
 
@@ -100,7 +100,7 @@ public class CharacterCapacityTable {
      * the error correction level and encoding mode. Returns -1 if there are no
      * versions large enough to contain it.
      */
-    public int get(ErrorCorrectionLevel errorCorrectionLevel, EncodingMode encodingMode, int capacity) throws Exception {
+    public int get(ErrorCorrectionLevel errorCorrectionLevel, EncodingMode encodingMode, int capacity) {
         int[] table = this.getTableFromEncodingMode(encodingMode);
         int offset = Arrays.asList(ErrorCorrectionLevel.values()).indexOf(errorCorrectionLevel);
         for (int i = offset; i < 160; i = i + 4) {
