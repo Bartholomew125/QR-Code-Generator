@@ -1,8 +1,8 @@
 package Tables;
-import java.util.Arrays;
 import java.util.HashMap;
 
 import Exceptions.InvalidMaskPatternException;
+import Types.ErrorCorrectionLevel;
 
 /**
  * FormatInformationBitsTable is a class that holds the bit strings that descibe
@@ -15,11 +15,11 @@ import Exceptions.InvalidMaskPatternException;
  */
 public class FormatInformationBitsTable {
 
-    private HashMap<String, String[]> table;
+    private HashMap<ErrorCorrectionLevel, String[]> table;
 
     public FormatInformationBitsTable() {
         this.table = new HashMap<>();
-        this.table.put("L", 
+        this.table.put(ErrorCorrectionLevel.L, 
             new String[]{
                 "111011111000100",
                 "111001011110011",
@@ -31,7 +31,7 @@ public class FormatInformationBitsTable {
                 "110100101110110"
             }
         );
-        this.table.put("M", 
+        this.table.put(ErrorCorrectionLevel.M, 
             new String[]{
                 "101010000010010",
                 "101000100100101",
@@ -43,7 +43,7 @@ public class FormatInformationBitsTable {
                 "100101010100000"
             }
         );
-        this.table.put("Q", 
+        this.table.put(ErrorCorrectionLevel.Q, 
             new String[]{
                 "011010101011111",
                 "011000001101000",
@@ -55,7 +55,7 @@ public class FormatInformationBitsTable {
                 "010101111101101"
             }
         );
-        this.table.put("H", 
+        this.table.put(ErrorCorrectionLevel.H, 
             new String[]{
                 "001011010001001",
                 "001001110111110",
@@ -73,10 +73,7 @@ public class FormatInformationBitsTable {
      * Returns the format information bits given the error correction level, and
      * the mask pattern.
      */
-    public String get(String errorCorrectionLevel, int maskPattern) throws Exception {
-        if (!Arrays.asList("L", "M", "Q", "H").contains(errorCorrectionLevel)) {
-            throw new Exception("Error correction level "+errorCorrectionLevel+" is not part of L, M, Q or H");
-        }
+    public String get(ErrorCorrectionLevel errorCorrectionLevel, int maskPattern) throws Exception {
         if (maskPattern > 7 || maskPattern < 0) {
             throw new InvalidMaskPatternException();
         }
