@@ -2,6 +2,8 @@ package Tables;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import Exceptions.InvalidMaskPatternException;
+
 /**
  * FormatInformationBitsTable is a class that holds the bit strings that descibe
  * the format of the QR code. This includes which level of error correction
@@ -76,7 +78,7 @@ public class FormatInformationBitsTable {
             throw new Exception("Error correction level "+errorCorrectionLevel+" is not part of L, M, Q or H");
         }
         if (maskPattern > 7 || maskPattern < 0) {
-            throw new Exception("No such mask pattern exists. It must be between 0 and 7 (inclusive), but it was "+maskPattern);
+            throw new InvalidMaskPatternException();
         }
         return this.table.get(errorCorrectionLevel)[maskPattern];
     }
