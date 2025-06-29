@@ -37,7 +37,7 @@ public class ErrorCorrectionCodeWordsTable {
             throw new InvalidVersionException();
         }
         int index = (version-1)*4 +
-        Arrays.asList(ErrorCorrectionLevel.L, ErrorCorrectionLevel.M, ErrorCorrectionLevel.Q, ErrorCorrectionLevel.H).indexOf(errorCorrectionLevel);
+        Arrays.asList(ErrorCorrectionLevel.values()).indexOf(errorCorrectionLevel);
         return this.table[index];
     }
 }
