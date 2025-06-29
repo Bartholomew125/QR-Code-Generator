@@ -1,7 +1,6 @@
 package Tables;
 import java.util.Arrays;
 
-import Exceptions.InvalidEncodingModeException;
 import Exceptions.InvalidVersionException;
 import Types.EncodingMode;
 import Types.ErrorCorrectionLevel;
