@@ -1,3 +1,4 @@
+package Tables;
 /**
  * LogAntiLogTable is a class that is used to compute logarithms, and exponents
  * of numbers in Galois Field 256.
