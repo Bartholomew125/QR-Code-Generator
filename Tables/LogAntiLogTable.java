@@ -9,11 +9,11 @@ package Tables;
  */
 public class LogAntiLogTable {
 
-    private Integer[] logTable;
-    private Integer[] antiLogTable;
+    private int[] logTable;
+    private int[] antiLogTable;
 
     public LogAntiLogTable() {
-        this.logTable = new Integer[]{1,2,4,8,16,32,64,128,29,58,116,232,205,
+        this.logTable = new int[]{1,2,4,8,16,32,64,128,29,58,116,232,205,
             135,19,38,76,152,45,90,180,117,234,201,143,3,6,12,24,48,96,192,157,
             39,78,156,37,74,148,53,106,212,181,119,238,193,159,35,70,140,5,10,
             20,40,80,160,93,186,105,210,185,111,222,161,95,190,97,194,153,47,94,
@@ -28,7 +28,7 @@ public class LogAntiLogTable {
             195,155,43,86,172,69,138,9,18,36,72,144,61,122,244,245,247,243,251,
             235,203,139,11,22,44,88,176,125,250,233,207,131,27,54,108,216,173,
             71,142,1};
-        this.antiLogTable = new Integer[]{null,0,1,25,2,50,26,198,3,223,51,238,
+        this.antiLogTable = new int[]{0,1,25,2,50,26,198,3,223,51,238,
             27,104,199,75,4,100,224,14,52,141,239,129,28,193,105,248,200,8,76,
             113,5,138,101,47,225,36,15,33,53,147,142,218,240,18,130,69,29,181,
             194,125,106,39,249,185,201,154,9,120,77,228,114,166,6,191,139,98,
@@ -49,7 +49,7 @@ public class LogAntiLogTable {
      * Returns the remainder mod 256 of 2^exponent. This is Galois Field 256
      * arithmatic.
      */
-    public Integer getLog(int exponent) throws Exception {
+    public int getLog(int exponent) throws Exception {
         if (exponent < 0 || exponent > 255) {
             throw new Exception("Exponent must be between 0 and 255");
         }
@@ -60,10 +60,10 @@ public class LogAntiLogTable {
      * Returns the exponent of 2, which gives the integer mod 256. This is
      * Galois Field 256 arithmatic.
      */
-    public Integer getAntiLog(int integer) throws Exception {
-        if (integer < 0 || integer > 255) {
-            throw new Exception("Integer must be between 1 and 255");
+    public int getAntiLog(int integer) throws Exception {
+        if (integer < 1 || integer > 255) {
+            throw new Exception("int must be between 1 and 255");
         }
-        return this.antiLogTable[integer];
+        return this.antiLogTable[integer-1];
     }
 }
