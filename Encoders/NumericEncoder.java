@@ -1,5 +1,6 @@
 package Encoders;
 
+import Util.BitPadder;
 import Util.Converter;
 
 /**
@@ -13,6 +14,9 @@ public class NumericEncoder {
     public static String encode(String data) {
         // Put data into groups
         String[] groups = new String[(data.length()+2)/3];
+        for (int i = 0; i < groups.length; i++) {
+            groups[i] = "";
+        }
         int groupIndex = 0;
         for (int i = 0; i < data.length(); i++) {
             groups[groupIndex] += data.substring(i, i+1);
@@ -28,7 +32,16 @@ public class NumericEncoder {
         // Convert to binary
         String result = "";
         for (int group : finalGroups) {
-            result = result + Converter.decimalToBinary(group);
+            String bits = Converter.decimalToBinary(group);
+            if (group < 10) {
+                result += BitPadder.leftPadZero(bits, 4);
+            }
+            else if (group < 100) {
+                result += BitPadder.leftPadZero(bits, 7);
+            }
+            else {
+                result += BitPadder.leftPadZero(bits, 10);
+            }
         }
         return result;
     }
