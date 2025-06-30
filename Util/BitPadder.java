@@ -1,3 +1,4 @@
+package Util;
 /**
  * BitPadder is a class that is responsible for padding bitstrings with zeros or
  * ones on the left or right side.
