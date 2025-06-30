@@ -1,3 +1,5 @@
+package Encoders;
+
 import Types.EncodingMode;
 
 /**

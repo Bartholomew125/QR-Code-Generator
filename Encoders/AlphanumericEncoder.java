@@ -1,3 +1,5 @@
+package Encoders;
+
 import Tables.AlphanumericTable;
 import Util.BitPadder;
 import Util.Converter;
