@@ -9,7 +9,7 @@ import Encoders.NumericEncoder;
 public class NumericEncoderTest {
     
     @Test
-    public void testNumericEncoder() throws Exception {
+    public void testNumericEncoder() {
         assertEquals(NumericEncoder.encode("8675309"), "110110001110000100101001");
         assertEquals(NumericEncoder.encode("001001"), "00010001");
         assertEquals(NumericEncoder.encode("1111"), "00011011110001");
