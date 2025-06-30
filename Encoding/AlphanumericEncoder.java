@@ -1,4 +1,6 @@
 import Tables.AlphanumericTable;
+import Util.BitPadder;
+import Util.Converter;
 
 /**
  * AlphanumericEncoder is a class that is used for encoding data in alphanumeric

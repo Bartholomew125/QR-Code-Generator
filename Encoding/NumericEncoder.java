@@ -1,3 +1,5 @@
+import Util.Converter;
+
 /**
  * NumericEncoder is a class that is used to encode numeric data.
  */
