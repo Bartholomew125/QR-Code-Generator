@@ -1,3 +1,4 @@
+package Tables;
 /**
  * VersionInformationBitsTable is a class that stores a bit string for each QR
  * code version greater than or equal to 7, which represents that version.
