@@ -22,7 +22,7 @@ public class AlphanumericEncoder {
     public static String encode(String data) throws Exception {
         String result = "";
         int num = 0;
-        for (int i = 0; i < data.length()-3; i = i + 2) {
+        for (int i = 0; i < data.length()-2; i = i + 2) {
             num = TABLE.get(data.substring(i,i+1));
             num = num*45 + TABLE.get(data.substring(i+1,i+2));
             result = result + BitPadder.leftPadZero(Converter.decimalToBinary(num), 11);
