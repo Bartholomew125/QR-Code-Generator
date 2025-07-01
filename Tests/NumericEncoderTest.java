@@ -14,6 +14,6 @@ public class NumericEncoderTest {
         assertEquals(NumericEncoder.encode("001001"), "00010001");
         assertEquals(NumericEncoder.encode("1111"), "00011011110001");
         assertEquals(NumericEncoder.encode("128001128"), "001000000000010010000000");
-        assertEquals(NumericEncoder.encode("9909"), "01111011110");
+        assertEquals(NumericEncoder.encode("9909"), "11110111101001");
     }
 }
