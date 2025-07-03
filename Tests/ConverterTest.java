@@ -14,6 +14,6 @@ public class ConverterTest {
         assertEquals(Converter.decimalToBinary(16), "10000");
         assertEquals(Converter.decimalToBinary(127), "1111111");
         assertEquals(Converter.decimalToBinary(73829), "10010000001100101");
-        assertEquals(Converter.decimalToBinary(1), "1");
+        assertEquals(Converter.decimalToBinary(0), "0");
     }
 }
