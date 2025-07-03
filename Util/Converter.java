@@ -9,6 +9,7 @@ public class Converter {
      * Converts a positive integer to a binary string.
      */
     public static String decimalToBinary(int decimal) {
+        if (decimal == 0) { return "0"; }
         String binary = "";
 
         while (decimal > 0) {
