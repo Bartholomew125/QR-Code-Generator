@@ -15,23 +15,23 @@ public class BlockInformationTableTest {
     @Test
     public void testBlockInformationTableGetBlocksInGroup() throws Exception {
         BlockInformationTable bit = new BlockInformationTable();
-        assertEquals(bit.getBlocksInGroup(1, ErrorCorrectionLevel.M, 1), Integer.valueOf(1));
-        assertEquals(bit.getBlocksInGroup(10, ErrorCorrectionLevel.L, 2), Integer.valueOf(2));
-        assertEquals(bit.getBlocksInGroup(20, ErrorCorrectionLevel.Q, 1), Integer.valueOf(15));
-        assertEquals(bit.getBlocksInGroup(30, ErrorCorrectionLevel.H, 2), Integer.valueOf(25));
-        assertEquals(bit.getBlocksInGroup(40, ErrorCorrectionLevel.M, 2), Integer.valueOf(31));
-        assertEquals(bit.getBlocksInGroup(1, ErrorCorrectionLevel.L, 2), null);
+        assertEquals(bit.getBlocksInGroup(1, ErrorCorrectionLevel.M, 1), 1);
+        assertEquals(bit.getBlocksInGroup(10, ErrorCorrectionLevel.L, 2), 2);
+        assertEquals(bit.getBlocksInGroup(20, ErrorCorrectionLevel.Q, 1), 15);
+        assertEquals(bit.getBlocksInGroup(30, ErrorCorrectionLevel.H, 2), 25);
+        assertEquals(bit.getBlocksInGroup(40, ErrorCorrectionLevel.M, 2), 31);
+        assertEquals(bit.getBlocksInGroup(1, ErrorCorrectionLevel.L, 2), 0);
     }
 
     @Test
     public void testBlockInformationTableGetCodewordsPerBlockInGroup() throws Exception {
         BlockInformationTable bit = new BlockInformationTable();
-        assertEquals(bit.getCodewordsPerBlockInGroup(1, ErrorCorrectionLevel.M, 1), Integer.valueOf(16));
-        assertEquals(bit.getCodewordsPerBlockInGroup(10, ErrorCorrectionLevel.L, 2), Integer.valueOf(69));
-        assertEquals(bit.getCodewordsPerBlockInGroup(20, ErrorCorrectionLevel.Q, 1), Integer.valueOf(24));
-        assertEquals(bit.getCodewordsPerBlockInGroup(30, ErrorCorrectionLevel.H, 2), Integer.valueOf(16));
-        assertEquals(bit.getCodewordsPerBlockInGroup(40, ErrorCorrectionLevel.M, 2), Integer.valueOf(48));
-        assertEquals(bit.getCodewordsPerBlockInGroup(1, ErrorCorrectionLevel.L, 2), null);
+        assertEquals(bit.getCodewordsPerBlockInGroup(1, ErrorCorrectionLevel.M, 1), 16);
+        assertEquals(bit.getCodewordsPerBlockInGroup(10, ErrorCorrectionLevel.L, 2), 69);
+        assertEquals(bit.getCodewordsPerBlockInGroup(20, ErrorCorrectionLevel.Q, 1), 24);
+        assertEquals(bit.getCodewordsPerBlockInGroup(30, ErrorCorrectionLevel.H, 2), 16);
+        assertEquals(bit.getCodewordsPerBlockInGroup(40, ErrorCorrectionLevel.M, 2), 48);
+        assertEquals(bit.getCodewordsPerBlockInGroup(1, ErrorCorrectionLevel.L, 2), 0);
     }
 
     @Test
