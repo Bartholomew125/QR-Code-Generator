@@ -10,12 +10,27 @@ public class BitPadder {
      * length.
      */
     public static String leftPadZero(String bitString, int desiredLength) {
-        if (bitString.length() >= desiredLength) {
+        return BitPadder.padBits(bitString, desiredLength, "0", true);
+    }
+
+
+    /**
+     * Pads the given bitString with the given pad bits, until it is the desired
+     * length, on the left or right side.
+     */
+    public static String padBits(String bitString, int desiredLength, String padBits, boolean padLeftSide) {
+        int bitStringLength = bitString.length();
+        if (bitStringLength >= desiredLength) {
             return bitString;
         }
+        int padBitsLength = padBits.length();
+        int wholePadBitsNedded = (desiredLength-bitStringLength) / padBitsLength;
+        int remainder = (desiredLength-bitStringLength) % padBitsLength;
+        if (padLeftSide) {
+            return padBits.substring(padBitsLength-remainder, padBitsLength) + padBits.repeat(wholePadBitsNedded) + bitString;
+        }
         else {
-            String newBitString = "0" + bitString;
-            return leftPadZero(newBitString, desiredLength);
+            return bitString + padBits.repeat(wholePadBitsNedded) + padBits.substring(0, remainder+1);
         }
     }
 }
