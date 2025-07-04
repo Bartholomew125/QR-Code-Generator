@@ -6,11 +6,19 @@ package Util;
 public class BitPadder {
     
     /**
-     * Pads the given bitString with zeros on the left untill it is the desired
+     * Pads the given bitString with zeros on the left until it is the desired
      * length.
      */
     public static String leftPadZero(String bitString, int desiredLength) {
         return BitPadder.padBits(bitString, desiredLength, "0", true);
+    }
+
+    /**
+     * Pads the given bitString with zeros on the right until it is the desired
+     * length.
+     */
+    public static String rightPadZero(String bitString, int desiredLength) {
+        return BitPadder.padBits(bitString, desiredLength, "0", false);
     }
 
 
@@ -30,7 +38,7 @@ public class BitPadder {
             return padBits.substring(padBitsLength-remainder, padBitsLength) + padBits.repeat(wholePadBitsNedded) + bitString;
         }
         else {
-            return bitString + padBits.repeat(wholePadBitsNedded) + padBits.substring(0, remainder+1);
+            return bitString + padBits.repeat(wholePadBitsNedded) + padBits.substring(0, remainder);
         }
     }
 }
