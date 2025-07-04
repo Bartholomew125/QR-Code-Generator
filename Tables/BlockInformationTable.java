@@ -98,4 +98,17 @@ public class BlockInformationTable {
         }
     }
 
+    /**
+     * Returns the total number of codewords for the given QR code version and error
+     * correction level.
+     */
+    public int getTotalCodewords(int version, ErrorCorrectionLevel errorCorrectionLevel) throws Exception {
+        BlockInformationTable bit = new BlockInformationTable();
+        int blocksInGroup1 = bit.getBlocksInGroup(version, errorCorrectionLevel, 1);
+        int blocksInGroup2 = bit.getBlocksInGroup(version, errorCorrectionLevel, 2);
+        int codewordsInBlock1 = bit.getCodewordsPerBlockInGroup(version, errorCorrectionLevel, 1);
+        int codewordsInBlock2 = bit.getCodewordsPerBlockInGroup(version, errorCorrectionLevel, 2);
+        return blocksInGroup1*codewordsInBlock1 + blocksInGroup2 + codewordsInBlock2;
+    }
+
 }
