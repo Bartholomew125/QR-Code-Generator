@@ -43,5 +43,10 @@ public class UtilityTest {
         assertEquals(Utility.makeMultipleOf8("000000100"), "0000001000000000");
         assertEquals(Utility.makeMultipleOf8("11111"), "11111000");
     }
-    
+
+    @Test
+    public void testUtilityAddPadBytes() throws Exception {
+        assertEquals(Utility.addPadBytes("", 1, ErrorCorrectionLevel.H), "1110110000010001".repeat(4)+"11101100");
+        assertEquals(Utility.addPadBytes("00100000010110110000101101111000110100010111001011011100010011010100001101000000", 1, ErrorCorrectionLevel.Q), "00100000010110110000101101111000110100010111001011011100010011010100001101000000" + "111011000001000111101100");
+    }
 }
