@@ -63,36 +63,48 @@ public class Utility {
             switch (encodingMode) {
                 case Numeric:
                     desiredLength = 10;
+                    break;
                 case Alphanumeric:
                     desiredLength = 9;
+                    break;
                 case Byte:
                     desiredLength = 8;
+                    break;
                 case Kanji:
                     desiredLength = 8;
+                    break;
             }
         }
         else if (version >= 10 && version <= 26) {
             switch (encodingMode) {
                 case Numeric:
                     desiredLength = 12;
+                    break;
                 case Alphanumeric:
                     desiredLength = 11;
+                    break;
                 case Byte:
                     desiredLength = 16;
+                    break;
                 case Kanji:
                     desiredLength = 10;
+                    break;
             }
         }
         else {
             switch (encodingMode) {
                 case Numeric:
                     desiredLength = 14;
+                    break;
                 case Alphanumeric:
                     desiredLength = 13;
+                    break;
                 case Byte:
                     desiredLength = 16;
+                    break;
                 case Kanji:
                     desiredLength = 12;
+                    break;
             }
         }
         return BitPadder.leftPadZero(bits, desiredLength);
