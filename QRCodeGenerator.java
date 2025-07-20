@@ -36,7 +36,7 @@ public class QRCodeGenerator {
         String encodedData = AutoEncoder.encode(data);
         String bits = modeIndicator + characterCountIndicator + encodedData;
         bits = Utility.addTerminatorZeros(bits, version, errorCorrectionLevel);
-
+        bits = Utility.makeMultipleOf8(bits);
         return null;
     }
 }
