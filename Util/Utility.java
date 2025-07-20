@@ -118,4 +118,13 @@ public class Utility {
         int requiredZeros = (8-currentLength%8)%8;
         return BitPadder.rightPadZero(bits, requiredZeros+currentLength);
     }
+
+    /**
+     * Add the pad bytes 11101100 and 00010001 to the bit string until it is the required length given the version and error correction level.
+     */
+    public static String addPadBytes(String bits, int version, ErrorCorrectionLevel errorCorrectionLevel) throws Exception {
+        BlockInformationTable bit = new BlockInformationTable();
+        int requiredLength = 8*bit.getTotalCodewords(version, errorCorrectionLevel);
+        return BitPadder.padBits(bits, requiredLength, "11101100"+"00010001", false);
+    }
 }
