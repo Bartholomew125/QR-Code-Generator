@@ -3,6 +3,8 @@ package Tests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
+import java.lang.System.Logger.Level;
+
 import org.junit.Test;
 
 import Exceptions.InvalidGroupException;
@@ -50,5 +52,15 @@ public class BlockInformationTableTest {
         assertThrows(InvalidVersionException.class, () -> bit.getCodewordsPerBlockInGroup(41, ErrorCorrectionLevel.L, 1));
         assertThrows(InvalidGroupException.class, () -> bit.getCodewordsPerBlockInGroup(1, ErrorCorrectionLevel.L, 0));
         assertThrows(InvalidGroupException.class, () -> bit.getCodewordsPerBlockInGroup(1, ErrorCorrectionLevel.L, 3));
+    }
+
+    @Test
+    public void testBlockInformationTableGetTotalCodewords() throws Exception {
+        BlockInformationTable bit = new BlockInformationTable();
+        assertEquals(bit.getTotalCodewords(1, ErrorCorrectionLevel.L), 19);
+        assertEquals(bit.getTotalCodewords(1, ErrorCorrectionLevel.H), 9);
+        assertEquals(bit.getTotalCodewords(25, ErrorCorrectionLevel.L), 1276);
+        assertEquals(bit.getTotalCodewords(40, ErrorCorrectionLevel.L), 2956);
+        assertEquals(bit.getTotalCodewords(40, ErrorCorrectionLevel.H), 1276);
     }
 }
