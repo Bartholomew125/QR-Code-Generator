@@ -108,7 +108,7 @@ public class BlockInformationTable {
         int blocksInGroup2 = bit.getBlocksInGroup(version, errorCorrectionLevel, 2);
         int codewordsInBlock1 = bit.getCodewordsPerBlockInGroup(version, errorCorrectionLevel, 1);
         int codewordsInBlock2 = bit.getCodewordsPerBlockInGroup(version, errorCorrectionLevel, 2);
-        return blocksInGroup1*codewordsInBlock1 + blocksInGroup2 + codewordsInBlock2;
+        return blocksInGroup1*codewordsInBlock1 + blocksInGroup2*codewordsInBlock2;
     }
 
 }
