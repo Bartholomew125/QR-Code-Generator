@@ -35,5 +35,13 @@ public class UtilityTest {
         assertEquals(Utility.generateCharacterCountIndicator("1234567890", 30, EncodingMode.Numeric), "00000000001010");
     }
     
+    @Test
+    public void testUtilityMakeMultipleOf8() {
+        assertEquals(Utility.makeMultipleOf8(""), "");
+        assertEquals(Utility.makeMultipleOf8("0"), "00000000");
+        assertEquals(Utility.makeMultipleOf8("00000000"), "00000000");
+        assertEquals(Utility.makeMultipleOf8("000000100"), "0000001000000000");
+        assertEquals(Utility.makeMultipleOf8("11111"), "11111000");
+    }
     
 }
