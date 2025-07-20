@@ -109,4 +109,13 @@ public class Utility {
         }
         return BitPadder.leftPadZero(bits, desiredLength);
     }
+
+    /**
+     * Makes the given bit strings length a multiple of 8 by padding with zeros on the right side of it.
+     */
+    public static String makeMultipleOf8(String bits) {
+        int currentLength = bits.length();
+        int requiredZeros = (8-currentLength%8)%8;
+        return BitPadder.rightPadZero(bits, requiredZeros+currentLength);
+    }
 }
