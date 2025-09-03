@@ -1,6 +1,4 @@
-import Types.EncodingMode;
-import Types.ErrorCorrectionLevel;
-
+package Types;
 /**
  * QRCode is a class that represents a QRCode.
  */

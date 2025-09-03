@@ -3,6 +3,7 @@ import Encoders.EncodingModeAnalyser;
 import Tables.CharacterCapacityTable;
 import Types.EncodingMode;
 import Types.ErrorCorrectionLevel;
+import Types.QRCode;
 import Util.Utility;
 
 /**
